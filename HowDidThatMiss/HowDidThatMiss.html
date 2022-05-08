@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+  </head>
+  <body>
+    <script src="../TwitchLogin.js"></script>
+    <img id="howmiss" src="./HowDidThatMiss.png" class="hidden" />
+    <script>
+      ComfyJS.onReward = (user, reward, cost, message, extra) => {
+        if (reward === "How Did That Miss?!") {
+          const howmiss = document.getElementById("howmiss");
+          howmiss.classList.add("peekaboo");
+          howmiss.classList.remove("hidden");
+          setTimeout(() => {
+            howmiss.classList.remove("peekaboo");
+            howmiss.classList.add("hidden");
+          }, 4000);
+        }
+      };
+      ComfyJS.Init(userName, secret);
+    </script>
+  </body>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .peekaboo {
+      animation: peekaboo 2s infinite alternate;
+    }
+
+    @keyframes peekaboo {
+      0% {
+        transform: translateX(2000px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+  </style>
+</html>

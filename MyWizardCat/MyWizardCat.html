@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+  </head>
+  <body>
+    <script src="../TwitchLogin.js"></script>
+    <div class="divcontainer">
+      <img id="wizardcat" src="./MyWizardCat.png" width="112" />
+    </div>
+    <script>
+      ComfyJS.onReward = (user, reward, cost, message, extra) => {
+        if (reward === "Woosh") {
+          const wizardcat = document.getElementById("wizardcat");
+          wizardcat.classList.add("rotate");
+          setTimeout(() => {
+            wizardcat.classList.remove("rotate");
+          }, 1000);
+        }
+        if (reward === "Wooosh") {
+          const wizardcat = document.getElementById("wizardcat");
+          wizardcat.classList.add("rotateReverse");
+          setTimeout(() => {
+            wizardcat.classList.remove("rotateReverse");
+          }, 1000);
+        }
+      };
+      ComfyJS.Init(userName, secret);
+    </script>
+  </body>
+  <style>
+    .divcontainer {
+      overflow: hidden;
+      width: 112;
+      height: 112;
+    }
+    .rotate {
+      animation: rotation 1s 1 linear;
+    }
+    .rotateReverse {
+      animation: rotation 1s 1 linear;
+      animation-direction: reverse;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+</html>

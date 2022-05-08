@@ -1,0 +1,15 @@
+.hidden {
+  display: none;
+}
+.appear {
+  animation: appear 4s infinite alternate;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

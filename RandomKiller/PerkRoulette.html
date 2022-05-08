@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <script src="./killers.js"></script>
+    <script src="./killerPerks.js"></script>
+    <link rel="stylesheet" href="./PerkRoulette.css" />
+    <link rel="stylesheet" href="../animations.css" />
+  </head>
+  <body>
+    <div id="container" class="roulette hidden">
+      <div class="killer-container">
+        <img id="killerImage" />
+      </div>
+      <div class="perks-container">
+        <img id="perk1" />
+        <img id="perk2" />
+        <img id="perk3" />
+        <img id="perk4" />
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <script src="../TwitchLogin.js"></script>
+    <script>
+      function getRandomItem(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      }
+
+      function getRandomPerks(perks) {
+        let selectedPerks = [];
+        while (selectedPerks.length < 4) {
+          const perk = getRandomItem(perks);
+          if (!selectedPerks.includes(perk)) {
+            selectedPerks.push(perk);
+          }
+        }
+        return selectedPerks;
+      }
+
+      ComfyJS.onReward = (user, reward, cost, message, extra) => {
+        if (reward === "Perk Roulette") {
+          var sound = new Howl({
+            src: ["./ObsessionChosen.ogg"],
+            volume: 0.6,
+          });
+          sound.play();
+
+          const killer = getRandomItem(killers);
+          const perks = getRandomPerks(killerPerks);
+          const chatMessage =
+            killer.name + ": " + perks.map((x) => x.name).toString();
+          ComfyJS.Say(chatMessage);
+          document.getElementById("killerImage").src = killer.image;
+          document.getElementById("perk1").src = perks[0].image;
+          document.getElementById("perk2").src = perks[1].image;
+          document.getElementById("perk3").src = perks[2].image;
+          document.getElementById("perk4").src = perks[3].image;
+
+          const container = document.getElementById("container");
+          container.classList.add("appear");
+          container.classList.remove("hidden");
+          setTimeout(() => {
+            container.classList.remove("appear");
+            container.classList.add("hidden");
+            sound.pause();
+          }, 8000);
+        }
+      };
+      ComfyJS.Init(userName, secret);
+    </script>
+  </body>
+</html>

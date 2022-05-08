@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <link rel="stylesheet" href="../animations.css" />
+  </head>
+  <body>
+    <img id="box" src="./TheBox.png" class="hidden" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <script src="../TwitchLogin.js"></script>
+    <script>
+      ComfyJS.onReward = (user, reward, cost, message, extra) => {
+        if (reward === "The Box") {
+          const box = document.getElementById("box");
+          box.classList.add("appear");
+          box.classList.remove("hidden");
+
+          var sound = new Howl({
+            src: ["./TheBox.ogg"],
+            volume: 0.6,
+          });
+          sound.play();
+          setTimeout(() => {
+            box.classList.remove("appear");
+            box.classList.add("hidden");
+            sound.pause();
+          }, 8000);
+        }
+      };
+      ComfyJS.Init(userName, secret);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+  </head>
+  <body>
+    <script src="../TwitchLogin.js"></script>
+    <img id="ghostface" src="./ghostface.png" class="hidden" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <script>
+      ComfyJS.onReward = (user, reward, cost, message, extra) => {
+        if (reward === "Peekaboo") {
+          const ghostface = document.getElementById("ghostface");
+          ghostface.classList.add("peekaboo");
+          ghostface.classList.remove("hidden");
+          var sound = new Howl({
+            src: ["./Exposed.ogg"],
+            volume: 0.2,
+            loop: false,
+          });
+          setTimeout(function () {
+            sound.play();
+          }, 1000);
+          setTimeout(() => {
+            ghostface.classList.remove("peekaboo");
+            ghostface.classList.add("hidden");
+          }, 4000);
+        }
+      };
+      ComfyJS.Init(userName, secret);
+    </script>
+  </body>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .peekaboo {
+      animation: peekaboo 2s infinite alternate;
+    }
+
+    @keyframes peekaboo {
+      0% {
+        transform: translateY(2000px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  </style>
+</html>
