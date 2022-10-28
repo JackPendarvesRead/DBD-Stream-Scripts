@@ -158,4 +158,22 @@ const killerPerks = [
   },
   { name: "Call of Brine", image: "./Images/KillerPerks/CallOfBrine.png" },
   { name: "Merciless Storm", image: "./Images/KillerPerks/MercilessStorm.png" },
+  { name: "Dissolution", image: "./Images/KillerPerks/Dissolution.png" },
+  { name: "Septic Touch", image: "./Images/KillerPerks/SepticTouch.png" },
+  {
+    name: "Darkness Revealed",
+    image: "./Images/KillerPerks/DarknessRevealed.png",
+  },
+  {
+    name: "Superior Anatomy",
+    image: "./Images/KillerPerks/SuperiorAnatomy.png",
+  },
+  {
+    name: "Awakened Awareness",
+    image: "./Images/KillerPerks/AwakenedAwareness.png",
+  },
+  {
+    name: "Terminus",
+    image: "./Images/KillerPerks/Terminus.png",
+  },
 ];
