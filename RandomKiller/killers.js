@@ -107,4 +107,12 @@ const killers = [
     name: "Onryo",
     image: "./Images/KillerPortraits/Onryo.png",
   },
+  {
+    name: "Dredge",
+    image: "./Images/KillerPortraits/Dredge.png",
+  },
+  {
+    name: "Mastermind",
+    image: "./Images/KillerPortraits/Mastermind.png",
+  },
 ];
