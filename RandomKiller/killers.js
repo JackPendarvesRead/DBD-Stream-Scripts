@@ -115,4 +115,20 @@ const killers = [
     name: "Mastermind",
     image: "./Images/KillerPortraits/Mastermind.png",
   },
+  {
+    name: "Knight",
+    image: "./Images/KillerPortraits/Knight.png",
+  },
+  {
+    name: "Skull Merchant",
+    image: "./Images/KillerPortraits/SkullMerchant.png",
+  },
+  {
+    name: "Singularity",
+    image: "./Images/KillerPortraits/SkullMerchant.png",
+  },
+  {
+    name: "Xenomorph",
+    image: "./Images/KillerPortraits/SkullMerchant.png",
+  },
 ];

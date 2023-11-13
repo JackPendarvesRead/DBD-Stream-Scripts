@@ -143,7 +143,7 @@ const killerPerks = [
   { name: "Deadlock", image: "./Images/KillerPerks/Deadlock.png" },
   { name: "Hex: Plaything", image: "./Images/KillerPerks/Plaything.png" },
   {
-    name: "Source Hook: Gift of Pain",
+    name: "Scourge Hook: Gift of Pain",
     image: "./Images/KillerPerks/GiftOfPain.png",
   },
   { name: "Grim Embrace", image: "./Images/KillerPerks/GrimEmbrace.png" },
@@ -175,5 +175,108 @@ const killerPerks = [
   {
     name: "Terminus",
     image: "./Images/KillerPerks/Terminus.png",
+  },
+  {
+    name: "Hubris",
+    image: "./Images/KillerPerks/Hubris.png",
+  },
+  {
+    name: "Hex: Face The Darkness",
+    image: "./Images/KillerPerks/HexFaceTheDarkness.png",
+  },
+  {
+    name: "Nowhere To Hide",
+    image: "./Images/KillerPerks/NowhereToHide.png",
+  },
+  {
+    name: "Bitter Murmur",
+    image: "./Images/KillerPerks/BitterMurmur.png",
+  },
+  {
+    name: "Deerstalker",
+    image: "./Images/KillerPerks/Deerstalker.png",
+  },
+  {
+    name: "Distressing",
+    image: "./Images/KillerPerks/Distressing.png",
+  },
+
+  {
+    name: "Hex: No One Escapes Death",
+    image: "./Images/KillerPerks/noed.png",
+  },
+
+  {
+    name: "Hex: Thrill of the Hunt",
+    image: "./Images/KillerPerks/thrillofthehunt.png",
+  },
+
+  {
+    name: "Insidious",
+    image: "./Images/KillerPerks/Insidious.png",
+  },
+  {
+    name: "Iron Grasp",
+    image: "./Images/KillerPerks/IronGrasp.png",
+  },
+  {
+    name: "Scourge Hook: Monstrous Shrine",
+    image: "./Images/KillerPerks/MonstrousShrine.png",
+  },
+  {
+    name: "Shattered Hope",
+    image: "./Images/KillerPerks/ShatteredHope.png",
+  },
+  {
+    name: "Sloppy Butcher",
+    image: "./Images/KillerPerks/SloppyButcher.png",
+  },
+  {
+    name: "Spies From The Shadows",
+    image: "./Images/KillerPerks/SpiesFromTheShadows.png",
+  },
+  {
+    name: "Unrelenting",
+    image: "./Images/KillerPerks/Unrelenting.png",
+  },
+  {
+    name: "Whispers",
+    image: "./Images/KillerPerks/Whispers.png",
+  },
+  {
+    name: "Thwack!",
+    image: "./Images/KillerPerks/Thwack.png",
+  },
+  {
+    name: "Leverage",
+    image: "./Images/KillerPerks/Leverage.png",
+  },
+  {
+    name: "Game Afoot",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "SINGULARITY PERK 1",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "SINGULARITY PERK 2",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "SINGULARITY PERK 3",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "XENO PERK 1",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "XENO PERK 2",
+    image: "./Images/KillerPerks/GameAfoot.png",
+  },
+  {
+    name: "XENO PERK 3",
+    image: "./Images/KillerPerks/GameAfoot.png",
   },
 ];
